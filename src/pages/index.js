@@ -1,7 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
+
 const background = require('../assets/img/roads-212386_1280.jpg');
+const overlay = 'rgba(30,30,30,0.4)';
+const heroBodyStyles = {
+  background: `linear-gradient(${overlay}, ${overlay}), url(${background}) no-repeat center bottom`,
+  backgroundSize: 'cover'
+};
 
 const Card = ({children, to, img, title}) => (
   <div className="column is-3">
@@ -12,15 +18,18 @@ const Card = ({children, to, img, title}) => (
         </figure>
       </div>
       <div className="card-content">
-        <p className="title is-4">
+        <p className="title is-4 has-text-primary">
           {title}
         </p>
+        <hr />
         {children}
-        <Link className="button is-info is-small"
-          to={to}
-        >
-          Read More
-        </Link>
+        <p className="solution-link">
+          <Link className="button is-info is-small"
+            to={`/solutions${to}`}
+          >
+            Read More
+          </Link>
+        </p>
       </div>
     </div>
   </div>
@@ -30,19 +39,19 @@ Card.propTypes = {
   img: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  children: PropTypes.array.isRequired
+  children: PropTypes.object.isRequired
 };
 
 const IndexPage = () => (
   <div>
 
-    <section className="hero is-light is-large">
-      <div className="hero-body" style={{background: `url(${background}) no-repeat center bottom`, backgroundSize: 'cover'}}>
+    <section className="hero is-info is-medium">
+      <div className="hero-body" style={heroBodyStyles}>
         <div className="container has-text-centered">
-          <h1 className="title is-uppercase">
+          <h1 className="title is-uppercase has-text-primary">
             Controlnet International
           </h1>
-          <h2 className="subtitle">
+          <h2 className="subtitle has-text-white">
             Expert in Power System Integration
           </h2>
         </div>
@@ -52,22 +61,15 @@ const IndexPage = () => (
     <section className="hero has-text-centered is-light">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title has-text-warning">
+          <h1 className="title has-text-warning is-uppercase">
             Solutions
           </h1>
           <h2 className="subtitle">
-            what sort of solutions
+            what sort of engineering solutions
           </h2>
+          <hr />
 
           <div className="columns">
-            <Card
-              to="/microgrids"
-              img={require('../assets/img/tropical-828997_1280.jpg')}
-              title="Microgrids"
-            >
-              <p>Remote areas and what not</p>
-            </Card>
-
             <Card
               to="/microgrids"
               img={require('../assets/img/boat-2345242_1280.jpg')}
@@ -77,9 +79,17 @@ const IndexPage = () => (
             </Card>
 
             <Card
+              to="/flood-control"
+              img={require('../assets/img/tropical-828997_1280.jpg')}
+              title="Flood Control"
+            >
+              <p>Pumping station automation</p>
+            </Card>
+
+            <Card
               to="/microgrids"
               img={require('../assets/img/terraces-2275061_1280.jpg')}
-              title="Microgrids"
+              title="SCADA"
             >
               <p>Remote areas and what not</p>
             </Card>
@@ -87,7 +97,7 @@ const IndexPage = () => (
             <Card
               to="/microgrids"
               img={require('../assets/img/reflection-2339624_1280.jpg')}
-              title="Microgrids"
+              title="Automation"
             >
               <p>Remote areas and what not</p>
             </Card>

@@ -63,13 +63,107 @@ class Header extends React.Component {
   }
 }
 
+const Address = ({children}) => (
+  <div className="column">
+    <address className="address">
+      {children}
+    </address>
+  </div>
+);
+
+Address.propTypes = {
+  children: PropTypes.object.isRequired
+};
+
 const Footer = () => (
-  <div className="footer">
+  <div className="footer has-text-grey">
     <div className="container">
       <div className="content">
-        <p>
-          Controlnet International
-        </p>
+
+        <section className="footer-brand">
+          <span className="has-text-info is-uppercase has-text-weight-semibold">
+            Controlnet International
+          </span>
+          <br />
+          <span className="has-text-white">
+            Expert in Power System Integration
+          </span>
+        </section>
+
+        <section className="footer-contact-details">
+          <div className="columns">
+            <Address>
+              <p>
+                Taipei Headquarters:
+                <br />
+                No. 33, Lane 21,
+                <br />
+                Sec. 6 Minchuan E.Rd.
+                <br />
+                Neihu District, Taipei 11494
+                <br />
+                Taiwan
+              </p>
+            </Address>
+            <Address>
+              <p>
+                Taichung Branch:
+                <br />
+                No. 33, Lane 21,
+                <br />
+                Sec. 6 Minchuan E.Rd.
+                <br />
+                Neihu District, Taipei 11494
+                <br />
+                Taiwan
+              </p>
+            </Address>
+            <Address>
+              <p>
+                Kaohsiung Branch:
+                <br />
+                No. 33, Lane 21,
+                <br />
+                Sec. 6 Minchuan E.Rd.
+                <br />
+                Neihu District, Taipei 11494
+                <br />
+                Taiwan
+              </p>
+            </Address>
+            <Address>
+              <p>
+                Shanghai Branch:
+                <br />
+                No. 33, Lane 21,
+                <br />
+                Sec. 6 Minchuan E.Rd.
+                <br />
+                Neihu District, Taipei 11494
+                <br />
+                Taiwan
+              </p>
+            </Address>
+          </div>
+        </section>
+
+        <section className="footer-navigation">
+          <div className="columns">
+            <div className="column is-half">
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/About">About</Link></li>
+                <li><Link to="/Solutions">Solutions</Link></li>
+                <li><Link to="/Contact">Contact</Link></li>
+              </ul>
+            </div>
+            <div className="column is-half">
+              <p>
+                Copyright 2017, Controlnet International
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

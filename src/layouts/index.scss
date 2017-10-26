@@ -24,10 +24,14 @@ $danger: $deep-sky-blue;
 $dark: $dark-grey;
 $text: $bleached-cedar;
 $link: $apache;
+$gradient: linear-gradient(to right, #164970 0%,#68b2e5 33%,#164970 100%);
 
 $body-background-color: #fff;
+$footer-background-color: $dark-grey;
 
 $family-primary: $family-sans-serif;
+
+$navbar-height: 5em;
 
 @import '../../node_modules/bulma/bulma.sass';
 
@@ -39,4 +43,23 @@ $family-primary: $family-sans-serif;
 
 .wrapper {
   flex: 1;
+}
+
+.navbar {
+  border-bottom: 1px solid $oslo-grey;
+}
+
+.navbar-logo {
+  margin-right: 1rem;
+  vertical-align: middle;
+  height: 100%;
+  display: inline-block;
+}
+
+.navbar-item img {
+  max-height: 3rem;
+}
+
+.navbar-menu.is-active .navbar-item {
+  text-align: center;
 }

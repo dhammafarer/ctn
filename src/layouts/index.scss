@@ -19,8 +19,8 @@ $family-sans-serif: 'Montserrat';
 $primary: $deep-sky-blue;
 $info: $picton-blue;
 $success: $deep-sky-blue;
-$warning: $deep-sky-blue;
-$danger: $deep-sky-blue;
+$warning: $apache;
+$danger: $orange;
 $dark: $dark-grey;
 $text: $bleached-cedar;
 $link: $apache;
@@ -62,4 +62,10 @@ $navbar-height: 5em;
 
 .navbar-menu.is-active .navbar-item {
   text-align: center;
+}
+
+.hero::before, .hero::after {
+  content: '';
+  height: 3px;
+  background: $gradient;
 }

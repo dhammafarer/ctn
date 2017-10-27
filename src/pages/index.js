@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 
-const background = require('../assets/img/roads-212386_1280.jpg');
-const overlay = 'rgba(30,30,30,0.4)';
+const background = require('../assets/img/power-1549122_1920.jpg');
+const overlay = 'rgba(56,56,56,0.4)';
 const heroBodyStyles = {
   background: `linear-gradient(${overlay}, ${overlay}), url(${background}) no-repeat center bottom`,
   backgroundSize: 'cover'
@@ -45,15 +45,49 @@ Card.propTypes = {
 const IndexPage = () => (
   <div>
 
-    <section className="hero is-info is-medium">
+    <section className="hero is-light is-medium">
+      <div className="separator"></div>
       <div className="hero-body" style={heroBodyStyles}>
         <div className="container has-text-centered">
-          <h1 className="title is-uppercase has-text-primary">
+          <h1 className="title is-2 is-uppercase has-text-white">
             Controlnet International
           </h1>
           <h2 className="subtitle has-text-white">
             Expert in Power System Integration
           </h2>
+        </div>
+      </div>
+      <div className="separator"></div>
+    </section>
+
+    <section className="hero is-small is-white">
+      <div className="hero-body">
+        <div className="container">
+          <div className="has-text-centered summary">
+            <h2 className="summary-text">
+              Controlnet International Inc. has designed and developed
+              integrated power system solutions with focus on meeting specific user
+              needs in diverse industries and applications for over 27 years.
+            </h2>
+            <div className="summary-key-points">
+              <span>
+                Cost Efficient
+              </span>
+              <div className="dot"></div>
+              <span>
+                Customized Solutions
+              </span>
+              <div className="dot"></div>
+              <span>
+                Long Term Support
+              </span>
+            </div>
+            <Link className="button is-primary is-outlined is-medium"
+              to="/about"
+            >
+              More About The Company
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -62,10 +96,10 @@ const IndexPage = () => (
       <div className="hero-body">
         <div className="container">
           <h1 className="title has-text-warning is-uppercase">
-            Solutions
+            Complete Solutions
           </h1>
-          <h2 className="subtitle">
-            what sort of engineering solutions
+          <h2>
+            Controlnet offers complete EPC solutions in the fields of microgrids, automation systems, SCADA and more.
           </h2>
           <hr />
 

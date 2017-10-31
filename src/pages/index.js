@@ -71,11 +71,11 @@ const IndexPage = () => (
             </h2>
             <div className="summary-key-points">
               <span>
-                Cost Efficient
+                Customized Solutions
               </span>
               <div className="dot"></div>
               <span>
-                Customized Solutions
+                Cost Efficient
               </span>
               <div className="dot"></div>
               <span>
@@ -85,7 +85,7 @@ const IndexPage = () => (
             <Link className="button is-primary is-outlined is-medium"
               to="/about"
             >
-              More About The Company
+              More About CTN
             </Link>
           </div>
         </div>

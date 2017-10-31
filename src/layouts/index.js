@@ -49,9 +49,25 @@ class Header extends React.Component {
               <Link className="navbar-item" to="/about/" onClick={this.toggleMenu}>
                 About
               </Link>
-              <Link className="navbar-item" to="/services/" onClick={this.toggleMenu}>
-                Services
-              </Link>
+              <div className="navbar-item has-dropdown is-hoverable" onClick={this.toggleMenu}>
+                <Link className="navbar-link" to="/solutions/">
+                  Solutions
+                </Link>
+                <div className="navbar-dropdown">
+                  <Link className="navbar-item" to="/solutions/microgrids">
+                    Microgrids
+                  </Link>
+                  <Link className="navbar-item" to="/solutions/flood-control">
+                    Flood Control
+                  </Link>
+                  <Link className="navbar-item" to="/solutions/scada">
+                    SCADA
+                  </Link>
+                  <Link className="navbar-item" to="/solutions/automation">
+                    Automation
+                  </Link>
+                </div>
+              </div>
               <Link className="navbar-item" to="/contact/" onClick={this.toggleMenu}>
                 Contact
               </Link>
@@ -149,11 +165,11 @@ const Footer = () => (
 
         <section className="footer-navigation">
           <div className="columns">
-            <div className="column is-half">
+            <div className="column is-half is-hidden-mobile">
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/solutions">Solutions</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>

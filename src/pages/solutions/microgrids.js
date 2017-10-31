@@ -107,6 +107,29 @@ const Microgrids = () => (
           </div>
         </div>
       </div>
+      <div className="container">
+        <figure className="image">
+          <img src={require('../../assets/img/system-design.svg')} />
+        </figure>
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="container">
+        <h3 className="title">
+          Implementation Examples
+        </h3>
+        <figure className="image">
+          <p className="subtitle">Small Island</p>
+          <img src={require('../../assets/img/microgrid__small.jpg')} />
+        </figure>
+
+        <hr />
+        <figure className="image">
+          <p className="subtitle">Big Island</p>
+          <img src={require('../../assets/img/microgrid__big.jpg')} />
+        </figure>
+      </div>
     </section>
   </div>
 );

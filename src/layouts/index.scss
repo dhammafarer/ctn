@@ -186,6 +186,7 @@ $navbar-height: 5em;
 
 .microgrid-boxes {
   margin-top: -2rem;
+  margin-bottom: 1rem;
   text-align: center;
   width: 100%;
 }
@@ -214,4 +215,30 @@ $navbar-height: 5em;
     margin: 0;
     padding-top: 2px;
   }
+}
+
+.microgrids-intro {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.feature-cards {
+  margin: 1rem;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card-title {
+  color: $primary;
+  text-transform: uppercase;
+}
+
+.feature-card-separator {
+  width: 50%;
+  margin: 1rem auto;
+  display: block;
+  height: 1px;
+  background: $apache;
 }
